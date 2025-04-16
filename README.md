@@ -1,4 +1,4 @@
-# 🚀 Portfólio: Site Profissional para Advogada
+# 🚀 Portfólio: Site Profissional para advogada
 
 Desenvolvi um website moderno e responsivo para a **Dra. Bruna Matos**, advogada especialista em Direito Civil e Consumerista. O projeto combina design clean com funcionalidades estratégicas para apresentar sua expertise jurídica de forma profissional.
 
