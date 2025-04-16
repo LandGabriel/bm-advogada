@@ -1,0 +1,54 @@
+.practice-section {
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #8B0000;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.practice-item {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.practice-icon {
+  font-size: 2rem;
+  color: #8B0000;
+  margin-bottom: 15px;
+}
+
+.practice-item h3 {
+  font-size: 1.2rem;
+  color: #8B0000;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.practice-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}

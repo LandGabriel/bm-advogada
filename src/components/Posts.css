@@ -1,0 +1,63 @@
+/* src/components/Posts.css */
+.highlights-section {
+    padding: 80px 40px;
+    background-color: #fff5f5;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #8B0000;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .highlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-left: 5px solid #8B0000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 30px 25px;
+    max-width: 320px;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card h3 {
+    color: #8B0000;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .highlight-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      max-width: 100%;
+    }
+  }
+  
