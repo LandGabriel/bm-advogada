@@ -1,12 +1,23 @@
-# React + Vite
+# 🚀 Portfólio: Site Profissional para advogada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desenvolvi um website moderno e responsivo para a **Dra. Bruna Matos**, advogada especialista em Direito Civil e Consumerista. O projeto combina design clean com funcionalidades estratégicas para apresentar sua expertise jurídica de forma profissional.
 
-Currently, two official plugins are available:
+## ✨ Tecnologias Utilizadas
+- **React** (componentização eficiente)
+- **Tailwind CSS** (estilização ágil e responsiva)
+- **React Router** (navegação fluida entre seções)
+- **React Icons** (elementos visuais profissionais)
+- **Formspree** (integração de formulário de contato)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Destaques do Projeto
+### ✅ Arquitetura da Informação
+- Perfil profissional com formação e abordagem humanizada
+- Portfólio de casos emblemáticos
+- Áreas de atuação detalhadas (Direito Civil, Consumidor, Família, etc.)
+- Call-to-action estratégico para conversão de clientes
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 UX/UI Features
+- Design minimalista com identidade profissional
+- Totalmente responsivo (mobile-first)
+- Microinterações para melhor engajamento
+- Hierarquia visual clara para informações jurídicas
