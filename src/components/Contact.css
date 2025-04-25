@@ -104,3 +104,56 @@
   background: #e74c3c;
   color: white;
 }
+/* Estilos existentes... */
+
+/* ============ RESPONSIVO PARA CELULAR ============ */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .contact-form {
+    gap: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .submit-button,
+  .new-message-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .success-message {
+    padding: 15px;
+  }
+
+  .success-message p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+  }
+}

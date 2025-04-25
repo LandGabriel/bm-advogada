@@ -1,14 +1,26 @@
-// src/components/Header.jsx
+import { useState, useEffect } from 'react';
+import { FaInstagram, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { useState } from 'react';
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  // Fechar menu ao clicar em um link
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
+
+  // Fechar menu ao redimensionar a tela para desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <header className="header">
@@ -21,24 +33,36 @@ function Header() {
         </div>
       </div>
 
-      <div className="menu-toggle" onClick={toggleMenu}>
-        ☰
+      {/* Botão do menu mobile */}
+      <button 
+        className="mobile-menu-toggle"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Menu"
+      >
+        {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </button>
+
+      {/* Menu mobile */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <nav>
+          <a href="#sobre" onClick={closeMobileMenu}>Sobre</a>
+          <a href="#profissional" onClick={closeMobileMenu}>Profissional</a>
+          <a href="#atuacao" onClick={closeMobileMenu}>Atuação</a>
+          <a href="#contato" onClick={closeMobileMenu}>Contato</a>
+        </nav>
+        
+        <div className="mobile-social-icons">
+          <a href="https://www.instagram.com/brunamatos._/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://www.linkedin.com/in/bruna-matos-6330a3224/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
 
-      {menuOpen && (
-        <div className="mobile-menu">
-          <a href="#sobre">Sobre</a>
-          <a href="#profissional">Profissional</a>
-          <a href="#atuacao">Atuação</a>
-          <a href="#contato">Contato</a>
-          <div className="mobile-social">
-            <a href="https://www.instagram.com/brunamatos._/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/in/bruna-matos-6330a3224/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          </div>
-        </div>
-      )}
-
-      <nav className="nav desktop-only">
+      {/* Menu desktop */}
+      <nav className="desktop-nav">
         <ul>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#profissional">Profissional</a></li>
@@ -47,9 +71,13 @@ function Header() {
         </ul>
       </nav>
 
-      <div className="social-icons desktop-only">
-        <a href="https://www.instagram.com/brunamatos._/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a href="https://www.linkedin.com/in/bruna-matos-6330a3224/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+      <div className="desktop-social-icons">
+        <a href="https://www.instagram.com/brunamatos._/" target="_blank" rel="noopener noreferrer">
+          <FaInstagram />
+        </a>
+        <a href="https://www.linkedin.com/in/bruna-matos-6330a3224/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />
+        </a>
       </div>
     </header>
   );
